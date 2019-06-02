@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            size: 14px;
+            padding-top: 100px;
+        }
+
+        #userName,
+        #imageUrl {
+            size: 14px;
+        }
+
+        h4 {
+            size: 18px;
+            margin-top: 20px;
+        }
+
+        .q1 {
+            size: 14px;
+        }
+
+        .row {
+            padding-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+            <a class="navbar-brand" href="#">Soulmate finder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">S</button>
+
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xl-2"></div>
+            <form action="/api/friends" method="post" class="col-xl-8">
+                <div class="row">
+                    <div class="col-xl-1 input"></div>
+                    <input type="text" placeholder="name" id="userName" class="col-xl-5" required>
+                    <input type="text" placeholder="photo url" id="imageUrl" class="col-xl-5" required>
+                    <div class="col-xl-1"></div>
+                </div>
+
+                <h4 class="col-xl-12 text-center">You prefer going with the flow instead of planning</h4>
+
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q1" value="1" class="q1"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q1" value="2" class="q1"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q1" value="3" class="q1"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q1" value="4" class="q1"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q1" value="5" class="q1"><br>5<br>Completely agree
+                    </div>
+                    <div class="col-xl-1"></div>
+                </div>
+
+
+                <h4 class="col-xl-12 text-center">You are a morning person</h4>
+
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q2" value="1" class="q2"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q2" value="2" class="q2"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q2" value="3" class="q2"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q2" value="4" class="q2"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q2" value="5" class="q2"><br>5<br>Completely agree
+                    </div>
+                    <div class="col-xl-1"></div>
+                </div>
+
+
+                <h4>You enjoy cooking</h4>
+
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q3" value="1" class="q3"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q3" value="2" class="q3"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q3" value="3" class="q3"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q3" value="4" class="q3"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q3" value="5" class="q3"><br>5<br>Completely agree
+                    </div>
+                    <div class="col-xl-1"></div>
+                </div>
+
+                <h4>Exes can be friends</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q4" value="1" class="q4"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q4" value="2" class="q4"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q4" value="3" class="q4"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q4" value="4" class="q4"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q4" value="5" class="q4"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+                <h4>Could you be with someone who didn't share your political beliefs?</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q5" value="1" class="q5"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q5" value="2" class="q5"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q5" value="3" class="q5"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q5" value="4" class="q5"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q5" value="5" class="q5"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+                <h4>Religion is a very important thing in your life</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q6" value="1" class="q6"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q6" value="2" class="q6"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q6" value="3" class="q6"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q6" value="4" class="q6"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q6" value="5" class="q6"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+
+                <h4>You can stay away from your phone for long periods of time</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q7" value="1" class="q7"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q7" value="2" class="q7"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q7" value="3" class="q7"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q7" value="4" class="q7"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q7" value="5" class="q7"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+
+                <h4>Do you consider yourself an extrovert?</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q8" value="1" class="q8"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q8" value="2" class="q8"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q8" value="3" class="q8"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q8" value="4" class="q8"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q8" value="5" class="q8"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+
+                <h4>Couples should be 100% open about everything</h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q9" value="1" class="q9"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q9" value="2" class="q9"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q9" value="3" class="q9"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q9" value="4" class="q9"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q9" value="5" class="q9"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+
+                <h4>When you are having a bad day you rather spend time alone than being with someone you love.
+                </h4>
+                <div class="row">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q10" value="1" class="q10"><br>1<br>Completely disagree
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q10" value="2" class="q10"><br>2
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q10" value="3" class="q10"><br>3
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q10" value="4" class="q10"><br>4
+                    </div>
+                    <div class="col-xl-2 text-center">
+                        <input type="radio" name="q10" value="5" class="q10"><br>5<br>Completely agree
+                    </div>
+                </div>
+
+
+                <input type="submit" id="survey">
+
+            </form>
+            <div class="col-xl-2"></div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="bfName"></p>
+                    <img id="bfPhoto">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 text-center">
+        <div class="container">
+            <a href="/api/friends">All friends</a>
+            <span>|</span>
+            <a href="https://github.com/HelenaMadrid/FriendFinder">GitHub Repo</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+<script>
+    $("#survey").on("click", function (event) {
+        event.preventDefault();
+        var q1 = parseInt($("input[name='q1']:checked").val());
+        var q2 = parseInt($("input[name='q2']:checked").val());
+        var q3 = parseInt($("input[name='q3']:checked").val());
+        var q4 = parseInt($("input[name='q4']:checked").val());
+        var q5 = parseInt($("input[name='q5']:checked").val());
+        var q6 = parseInt($("input[name='q6']:checked").val());
+        var q7 = parseInt($("input[name='q7']:checked").val());
+        var q8 = parseInt($("input[name='q8']:checked").val());
+        var q9 = parseInt($("input[name='q9']:checked").val());
+        var q10 = parseInt($("input[name='q10']:checked").val());
+
+        if (isNaN(q1) === true || isNaN(q2) === true|| isNaN(q3) === true || isNaN(q4) === true || isNaN(q5) === true|| isNaN(q6) === true || isNaN(q7) === true || isNaN(q8) === true || isNaN(q9) === true || isNaN(q10) === true) {
+            $("#exampleModalLabel").text("ANSWER ALL QUESTIONS");
+            $("#bfName").text("In order for us to match you with your new best friend you need to answer all questions!");
+            $(".modal").modal("toggle");
+        }
+        else {
+            var newFriend;
+            var currentUrl = window.location.origin;
+            var score = [];
+            var name = $("#userName").val().trim();
+            var imageUrl = $("#imageUrl").val().trim();
+
+            newFriend = {
+                name: name,
+                image: imageUrl,
+                score: [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10]
+            }
+
+            console.log(q1 + q2);
+            $.post(currentUrl + "/api/friends", newFriend).then(function (data) {
+                console.log(data.name);
+                console.log(data.image);
+                $("#exampleModalLabel").text("Meet your new best friend!");
+                $("#bfName").text(data.name);
+                $("#bfPhoto").attr("src", data.image);
+                $(".modal").modal("toggle");
+
+            });
+
+            console.log(newFriend);
+        }
+    });
+</script>
